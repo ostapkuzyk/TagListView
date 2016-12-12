@@ -350,6 +350,8 @@ open class TagListView: UIView {
         tagBackgroundViews.append(UIView(frame: tagView.bounds))
         rearrangeViews()
         
+        tagView.removeButton.addTarget(self, action: #selector(removeButtonPressed(_:)), for: .touchUpInside)
+        
         return tagView
     }
 
